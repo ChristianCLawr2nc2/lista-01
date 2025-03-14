@@ -32,9 +32,9 @@ d) A saída será erro em ambas as linhas que utilizam console.log
 
 **R)** A resposta é a letra "a", porque ao rodar o código a var é puxada para o topo do código fazendo a var X ser nomeada porém sem um valor ainda que só foi definido após o console.log assim tendo a saída undefined. Já o erro ocorre porque uma let não pode ser usada antes da linha que contem o comando y = 10.
 
-
-**2) O seguinte código JavaScript tem um erro que impede sua execução correta. Analise e indique a opção que melhor corrige o problema. Justifique sua resposta.**
 ___
+**2) O seguinte código JavaScript tem um erro que impede sua execução correta. Analise e indique a opção que melhor corrige o problema. Justifique sua resposta.**
+
 ```javascript
 function soma(a, b) {
     if (a || b === 0) {
