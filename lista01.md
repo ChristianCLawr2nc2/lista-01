@@ -22,7 +22,7 @@ var x = 5;
 console.log(y);
 let y = 10;
 ```
-a) A saída será undefined seguido de erro 
+==> a) A saída será undefined seguido de erro 
 
 b) A saída será 5 seguido de 10
 
@@ -30,9 +30,11 @@ c) A saída será undefined seguido de undefined
 
 d) A saída será erro em ambas as linhas que utilizam console.log
 
+**R)** A resposta é a letra "a", porque ao rodar o código a var é puxada para o topo do código fazendo a var X ser nomeada porém sem um valor ainda que só foi definido após o console.log assim tendo a saída undefined. Já o erro ocorre porque uma let não pode ser usada antes da linha que contem o comando y = 10.
+
 
 **2) O seguinte código JavaScript tem um erro que impede sua execução correta. Analise e indique a opção que melhor corrige o problema. Justifique sua resposta.**
-
+___
 ```javascript
 function soma(a, b) {
     if (a || b === 0) {
@@ -45,11 +47,13 @@ console.log(soma(2, 0));
 
 a) Substituir if (a || b === 0) por if (a === 0 || b === 0)
 
-b) Substituir if (a || b === 0) por if (a === 0 && b === 0)
+==> b) Substituir if (a || b === 0) por if (a === 0 && b === 0)
 
 c) Substituir if (a || b === 0) por if (a && b === 0)
 
 d) Remover completamente a verificação if (a || b === 0)
+
+**R)** A "b" é a correta porque essa correção no código fará com que o if compare de verdade se (a === 0) e (b === 0) fazendo tudo fucionar com a lógica correta.
 
 ______
 **3) Ao executar esse código, qual será a saída no console? Indique a alternativa correta e justifique sua resposta.**
@@ -78,11 +82,13 @@ console.log(calcularPreco("eletrônico"));
 
 a) O código imprime 1000.
 
-b) O código imprime 200.
+==> b) O código imprime 200.
 
 c) O código imprime 50.
 
 d) O código gera um erro.
+
+**R)** A saída será o número 200 porque no switch quando você coloca um case e não escreve no final do case o "break" ele sobrescreverá o próximo emcima do anterior fazendo com que o "preco" eletrônico seja 200 e não 1000.
 
 ______
 **4) Ao executar esse código, qual será a saída no console? Indique a alternativa correta e justifique sua resposta.**
@@ -99,7 +105,9 @@ b) 6
 
 c) 18
 
-d) 24
+==> d) 24
+
+**R)** A alternativa correta é a "E" porque no array a função .map multiplica cada elemento do array por 2, a .filter vai deixar apenas os números maiores que 5 no array e a . reduce vai soma-los começando do 0.
 ______
 **5) Qual será o conteúdo do array lista após a execução do código? Indique a alternativa correta e justifique sua resposta.**
 
@@ -113,9 +121,11 @@ a) ["banana", "maçã", "uva", "abacaxi", "manga", "laranja"]
 
 b) ["banana", "abacaxi", "manga"]
 
-c) ["banana", "abacaxi", "manga", "laranja"]
+==> c) ["banana", "abacaxi", "manga", "laranja"]
 
 d) ["banana", "maçã", "uva", "abacaxi", "manga"]
+
+**R)** A resposta é a "C" porque na função .splice aplicada no array funciona da seguinte forma, (1 = elemento que inicia a substituição, 2 = n° de elementos a ser substituidos, termos que vão substituir) assim dando o array da alternativa "C".
 ______
 **6) Abaixo há duas afirmações sobre herança em JavaScript. Indique a alternativa correta e justifique sua resposta**
 
@@ -123,13 +133,15 @@ I. A herança é utilizada para compartilhar métodos e propriedades entre class
 II. Em JavaScript, a herança é implementada através da palavra-chave `extends`.
 
 
-a) As duas afirmações são verdadeiras, e a segunda justifica a primeira.
+==> a) As duas afirmações são verdadeiras, e a segunda justifica a primeira.
 
 b) As duas afirmações são verdadeiras, mas a segunda não justifica a primeira.
 
 c) A primeira afirmação é verdadeira, e a segunda é falsa.
 
 d) A primeira afirmação é falsa, e a segunda é verdadeira.
+
+**R)** A resposta é a "A" porque a segunda afirmação diz o comando que permite que classes filhas usem métodos e propriedades herdados de classes pais.
 ______
 **7) Dado o seguinte código. Indique a alternativa correta e justifique sua resposta.**
 
@@ -165,13 +177,15 @@ III) O código não funciona corretamente, pois Funcionario não pode herdar de 
 
 Quais das seguintes afirmações são verdadeiras sobre o código acima?
 
-a) I e II são verdadeiras.
+==> a) I e II são verdadeiras.
 
 b) I, II e III são verdadeiras.
 
 c) Apenas II é verdadeira.
 
 d) Apenas I é verdadeira.
+
+**R)** A resposta é alternativa "A".
 
 ______
 
@@ -182,11 +196,13 @@ ______
 
 a) A asserção é falsa e a razão é verdadeira.
 
-b) A asserção é verdadeira e a razão é falsa.
+==> b) A asserção é verdadeira e a razão é falsa.
 
 c) A asserção é verdadeira e a razão é verdadeira, mas a razão não explica a asserção.
 
 d) A asserção é verdadeira e a razão é verdadeira, e a razão explica a asserção.
+
+**R)** A asserção é verdadeira porque o conseito está certo já que sim objetos diferentes podem responder a mesma função. A razão está errada porque o javascript não tem suporte para o método de sobrecarga de classes nativamente.
 
 ______
 
@@ -203,6 +219,20 @@ function somaArray(numeros) {
 }
 console.log(somaArray([1, 2, 3, 4]));
 ```
+
+**R)** 
+```javascript
+function somaArray(numeros) {
+
+    let soma = 0
+
+    for (let i = 0; i < numeros.length; i++) {
+        soma += 2 * numeros[i];
+    }
+    return soma;
+}
+console.log(somaArray([1, 2, 3, 4]));
+ ```
 ______
 10) Crie um exemplo prático no qual você tenha duas classes:
 
@@ -210,3 +240,39 @@ ______
 - Uma classe `Livro` que herda de `Produto` e modifica o método `calcularDesconto()`, aplicando um desconto de 20% no preço dos livros.
 
 Explique como funciona a herança nesse contexto e como você implementaria a modificação do método na classe `Livro`.
+
+```javascript
+class Produto {
+    
+    constructor(nome, preco) {
+      this.nome = nome;
+      this.preco = preco;
+    }
+  
+    // Método para calcular desconto padrão (10%)
+    calcularDesconto() {
+      return this.preco * 0.90;
+    }
+  }
+  
+  class Livro extends Produto {
+    constructor(nome, preco, autor) {
+      super(nome, preco); // Chama o construtor da classe pai (Produto)
+      this.autor = autor;
+    }
+  
+    // Sobrescrevendo o método calcularDesconto() para aplicar 20%
+    calcularDesconto() {
+      return this.preco * 0.80;
+    }
+  }
+  
+  // Criando instâncias e testando
+  const produtoGeral = new Produto("Smartphone", 2000);
+  console.log(`Preço do ${produtoGeral.nome} com desconto: R$ ${produtoGeral.calcularDesconto().toFixed(2)}`);
+  
+  const livro = new Livro("O Senhor dos Anéis", 100, "J.R.R. Tolkien");
+  console.log(`Preço do livro "${livro.nome}" com desconto: R$ ${livro.calcularDesconto().toFixed(2)}`);
+```
+
+**R)** A classe pai(Produto) cria o constructor onde define nome e preço e depois o método de calcular o desconto de 10%, então implementa a subclasse filha(Livro), que vai herdar as definições de nome e preço mas sobrescrever a função de calcular o desconto agora para 20% que será apenas usado em Livros.
