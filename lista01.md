@@ -240,7 +240,7 @@ ______
 - Uma classe `Livro` que herda de `Produto` e modifica o método `calcularDesconto()`, aplicando um desconto de 20% no preço dos livros.
 
 Explique como funciona a herança nesse contexto e como você implementaria a modificação do método na classe `Livro`.
-
+**R)**
 ```javascript
 class Produto {
     
@@ -275,4 +275,4 @@ class Produto {
   console.log(`Preço do livro "${livro.nome}" com desconto: R$ ${livro.calcularDesconto().toFixed(2)}`);
 ```
 
-**R)** A classe pai(Produto) cria o constructor onde define nome e preço e depois o método de calcular o desconto de 10%, então implementa a subclasse filha(Livro), que vai herdar as definições de nome e preço mas sobrescrever a função de calcular o desconto agora para 20% que será apenas usado em Livros.
+ A classe pai(Produto) cria o constructor onde define nome e preço e depois o método de calcular o desconto de 10%, então implementa a subclasse filha(Livro), que vai herdar as definições de nome e preço mas sobrescrever a função de calcular o desconto agora para 20% que será apenas usado em Livros.
